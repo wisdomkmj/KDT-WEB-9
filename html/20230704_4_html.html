@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 태그</title>
+</head>
+
+<body>
+    <div>사용자에게 값을 입력받을 때 사용</div>
+
+    <h2>text type</h2>
+    <input type="text" name="name" placeholder="이름을 입력"/> 
+    <!-- name: back에 정보를 전송할때, name 속성을 사용하게 되는 -->
+    <!-- placeholder: 박스에 넣을 값 안내 -->
+    <input type="text" name="phone" value= "010-xxxx-xxxx"/>
+    <!-- value: 값이 들어가 있다 -->
+
+    <h2>button type</h2>
+    <input type="button" value="제출"/>
+    <button type="submit">제출</button>
+    <!--바로 위 두개는 버튼 만드는 두가지 방법 --> 
+
+    <h2>password type</h2>
+    <input type="password" name="pw"/>
+   
+    <h2>checkbox type</h2>
+    <input type="checkbox" name="hobby" value="baseball" />야구
+    <input type="checkbox" name="hobby" value="footbal" />축구
+
+    <h2>radio type1</h2>
+    <input type="radio" name="gender" value="male" />남자
+    <input type="radio" name="gender" value="female" />여자
+
+    
+    <h2>radio type2</h2>
+    <input type="radio" name="favorite" value="baseball" />야구
+    <input type="radio" name="favorite" value="football" />축구
+
+    <input type="radio" name="favorite" value="basketball" id="basketball"/>
+    <label for="basketball">농구</label>
+
+
+</body>
+</html>
