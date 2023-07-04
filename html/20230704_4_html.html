@@ -26,7 +26,7 @@
    
     <h2>checkbox type</h2>
     <input type="checkbox" name="hobby" value="baseball" />야구
-    <input type="checkbox" name="hobby" value="footbal" />축구
+    <input type="checkbox" name="hobby" value="footbal" checked/>축구
 
     <h2>radio type1</h2>
     <input type="radio" name="gender" value="male" />남자
@@ -39,7 +39,34 @@
 
     <input type="radio" name="favorite" value="basketball" id="basketball"/>
     <label for="basketball">농구</label>
+<!-- 체크박스 클릭시 차이 확인(해당 글자만 클릭해도 선택됨) -->
 
+    <h2>date type</h2>
+    <input type="date" name="birth" />
+    <input type="datetime-local" name="birthtime" />
 
+    <h2>select tag</h2>
+    <select name="select-name">
+        <optgroup label="옵션1~2">
+            <option value="option1">옵션1</option>
+            <option value="option2">옵션2</option>
+        </optgroup>
+        <optgroup label="옵션3~4">
+        <option value="option3">옵션1</option>
+        <option value="option2" selected>옵션2</option>
+        <option value="option4">옵션3</option>
+        </optgroup>
+    </select>
+    <!-- name은 식별자 느낌
+         selected 미리보기 고정 -->
+
+         <div>
+            <input type="text" name="email" value="abc@gmail.com">
+         </div>
+         
+         <div>
+            <input type="text" name="email" value="abc@gmail.com" readonly>
+         </div>
+    <!-- readonly 읽기만 가능,수정 불가 -->
 </body>
 </html>

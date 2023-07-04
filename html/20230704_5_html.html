@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그</title>
+</head>
+<body>
+    <!-- table > tr > th, td //tree?-->
+    <table border="5" cellspacing="5" cellpadding="10" align="center" width="75%" bordercolor="greens" bgcolor="yellow" >
+        <tr>
+            <th>이름</th>
+            <th>전화번호</th>
+            <th>이메일</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>010-0000-0000</td>
+            <td>A@mail.com</td>
+        </tr>
+        <tr>
+            <td>둘리</td> 
+            <td>010-1111-1111</td>    
+            <td>B@mail.com</td>       
+        </tr>
+    </table>    
+
+    <table border="5" cellspacing="5" cellpadding="10" align="center" width="75%" bordercolor="greens" bgcolor="yellow" >
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+        </tr>
+        <tr>
+            <td colspan="2">내용1</td>
+            <!-- <td>내용2</td> -->
+            <td>내용3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">내용1</td> 
+            <td>내용2</td>    
+            <td>내용3</td>       
+        </tr>
+        <tr>
+            <td>내용1</td> 
+            <td>내용2</td>    
+            <td>내용3</td>       
+        </tr>
+    </table>   
+    <!-- tbody? thead? -->
+</body>
+</html>
