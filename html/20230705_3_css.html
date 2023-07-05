@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* span.orange{
+            color: orange;
+        } */
+        /* li.orange.apple{
+
+        } */
+        div > p{
+            color: red;
+        }
+        div > .orange{
+            color: orange;
+        }
+        div .orange{
+            background-color: red;
+            width: 50px
+        }
+        ul + div{
+            color: green;
+        }
+        .apple ~ li{
+            font-weight: 900;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <!-- <li class="orange apple">사과</li> -->
+            <li class="apple">사과</li>
+            <li>사과</li>
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+</body>
+</html>
