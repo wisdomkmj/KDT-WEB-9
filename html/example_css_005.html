@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div *:nth-child(2n+1){
+            color: white;
+            background-color: navy;
+            width: 300px;
+        }
+        div *:nth-child(2n){
+            color: black;
+            background-color: yellow;
+            width: 300px;
+        } */
+        .stripes *:nth-child(2n+1){
+            color: white;
+            background-color: navy;
+            width: 300px;
+        }
+        .stripes *:nth-child(2n){
+            color: black;
+            background-color: yellow;
+            width: 300px;
+        }
+        .example::after{
+            content:" 🥱👌 ";
+        }
+        .example::before{
+            content:"🥱😮😮";
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="stripes">
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>yellow</div>
+    </div> -->
+
+    <div class="example">
+        바로가기
+       </div>
+    <div class"fruits></div>
+</body>
+</html>

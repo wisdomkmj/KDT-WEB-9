@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수로 지정하기</title>
+    <style>
+        /* 속성값 변수화 */
+        :root{
+            --main-color : orange;
+            --main-bg-color : white;
+            --sub-color : blue;
+            --big-font-size: 30px;
+        }
+        div{
+            color: var(--main-color);
+            font-weight: 900;
+            font-size: var(--big-font-size);
+        }
+        p{
+            background-color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
