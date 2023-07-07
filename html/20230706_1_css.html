@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐스캐이딩</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        @font-face {
+        font-family: 'TTWanjudaedunsancheB';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+}
+        :root{
+            font-size: 20px;
+        }
+        main{
+            font-size: 30px;
+        }
+        /* div{
+            font-weight: 100;
+        } */
+        .font-px{
+            font-size: 20px;
+        }
+
+        .font-em{
+            font-size: 1.5em;
+            font-weight: 900;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .font-rem{
+            font-size: 1.5rem;
+            line-height: 2;
+            font-family: 'TTWanjudaedunsancheB', sans-serif;
+        }
+        /* px은 화면 해상도에 따라 변경 */
+        /* em rem 차이? */
+        /* em: 가장 가까운 부모요소의 font-size */
+        /* rem: 전체 html의 font-size */
+        .font-per{
+            font-size: 100%;
+            color: rgba(211, 121, 121, 0.356);
+            text-align: center;
+            text-decoration: underline;
+        }
+        .inline-block{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <!-- <div>안녕하세요?</div> -->
+    <div class="font-px">안녕하세요?</div>
+    <div class="font-em">안녕하세요?</div>
+    <div class="font-rem">안녕하세요?</div>
+    <div class="font-per">안녕하세요?</div>
+    </main>
+    <a href="#">에이태그</a>
+    <div style="background-color: red; width: 50px;">aaa</div>
+    <span style="background-color: blue;">asfasdf</span>
+    <div style="display: inline-block;background-color: yellow;"></div>
+</body>
+</html>
+
