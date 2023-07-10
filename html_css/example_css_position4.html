@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        div > .fkdldjs {
+            width: 800px;
+            height: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+            background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+            /* background-repeat: no-repeat; */
+        }
+        .fk{
+            background-position: top;
+            background-repeat: repeat-x;
+        }
+        .dl{
+            /* position: relative;
+            top: 30px;
+            left: 100; */
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 100px 30px;
+            /* contain 짧은 축 맞추기 */
+        }
+        .djs{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: -150px, -50px;
+            /* cover 긴축 맞추기 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="fkdldjs fk"></div>
+        <div class="fkdldjs dl"></div>
+        <div class="fkdldjs djs"></div>
+    </div>
+</body>
+</html>

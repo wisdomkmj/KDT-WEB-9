@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            animation: movetoright 1s infinite linear alternate ;
+
+            /* transform: rotate(45deg); */
+            /* transition: 2s linear; */
+        }
+        /* div:active{
+            transform: rotate(45deg);
+        } */
+        
+        @keyframes movetoright{
+            from{
+                left: 0px;
+            }
+            to{
+                left: 100px;
+            }
+            /* or */
+        /* 0%{
+            left: 0px;
+        }
+        50%{
+            lefet: 100px;
+        }
+        100%{
+            left: 0px;
+        } */
+        }
+        
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

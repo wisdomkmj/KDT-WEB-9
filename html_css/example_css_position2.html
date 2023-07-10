@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습2</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            position: relative;
+        }
+        .container2{
+            position: relative;    
+        }
+        .item{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            
+        }
+        .item1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+        .one{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            z-index: 1;
+        }
+        .two{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            top: 30px;
+            left: 30px;
+            z-index: 2;
+        }
+        .three{
+            width: 100px;
+            height: 100px;
+            width: 100px;
+            top: 60px;
+            left: 60px;
+            background-color: blue;
+            z-index: 3;
+        }
+        .one1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            z-index: 3;
+        }
+        .two1{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            top: 30px;
+            left: 30px;
+            z-index: 1;
+        }
+        .three1{
+            width: 100px;
+            height: 100px;
+            width: 100px;
+            top: 60px;
+            left: 60px;
+            background-color: blue;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container aaa">
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+    </div>
+    <div class="container bbb">
+        <div class="item1 one1"></div>
+        <div class="item1 two1"></div>
+        <div class="item1 three1"></div>
+    </div>
+</body>
+</html>
