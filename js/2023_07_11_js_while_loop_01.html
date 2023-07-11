@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let fruits = ["apple", "banana", "orange", "grape"];
+        // for(let i=0; i< fruits.length; i++){
+        //     console.log("fruits[i]");
+        // }
+        
+        
+        //continue 사용법
+        // let fruits = ["apple", "banana", "orange", "grape"]
+        // for(let i=0; i < fruits.length; i++) {
+        //     if(fruits[i] == "banana") {
+        //         continue
+        //     }
+        //     console.log(fruits[i]);
+        // }
+
+        // let index = -1;
+        // while(index < fruits.length-1){
+        //     index++;
+        //     if(fruits[index] == "banana") {
+        //         continue
+        //     }
+        //     console.log(fruits[index]);
+        // }
+        // continue 사용법 해석 해보기
+
+        // let index = 0;
+        // while(index < fruits.length){
+        //     console.log(fruits[index]);
+            
+        //     index++;
+        // }
+
+        // let num = NaN;
+        // while(isNaN(num)){
+        //     num = Number(prompt("숫자를 입력하세요"))
+        // }
+        
+        //while문은 보통 반복될 횟수를 지정할 수 없을 때 사용
+        let number = 5;
+        while(true){
+            number = Number(prompt("10이상 숫자를 입력하세요"))
+            if(number >= 10){
+                break;
+            }
+        }
+
+        //console.log(num)
+        //console.log(isNaN(num))
+
+        // 사용자가 숫자를 입력하길 기대하면서
+        // 1~숫자까지의 합을 구하는 코드
+
+        // while(조건문){
+        //     실행할 코드(명령문)
+        // }
+        
+        //구구단 ?
+        let i = 2;
+        while(i<10) {
+            let j = 1;
+            while (j<10){
+                console.log(`${i}x${j} = ${i*j}`)
+                j++;
+            }
+            i++;
+        }
+    </script>
+</body>
+</html>

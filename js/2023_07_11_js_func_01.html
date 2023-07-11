@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_func</title>
+    
+</head>
+<body>
+    <script>
+        //함수 선언
+        
+        //함수 선언문: 함수를 선언하기 전에 호출 가능. 위치 상관 없이.
+        function sayHello(){
+            console.log("Hello");
+        }
+        //함수를 만들다고 해서 함수의 내용이 실행되나? -> No, 함수 선언 후 호출을 해야 실행 됨.
+        sayHello(); //함수 호출
+
+        //함수 표현식: 함수를 선언하기 전에 호출 불가능.
+        let sayHello2 = function(){
+            console.log("Hello2");
+        }
+        sayHello2(); //함수 호출
+
+        //화살표 함수 function >>> =>로 변경 
+        let sayHello3 = () => {
+            console.log("Hello3");
+        }
+        sayHello3(); //함수 호출
+    </script>
+    <script>
+        let number =5;
+    
+    //매개변수란? 함수 외부에서 사용한 변수, 값 등을
+    //함수 내부로 전달하고 싶을 때 사용.
+    
+    //반환값이란? 함수 내부에서 생성된 변수, 값 등을
+    //함수 외부로 전달하고 싶을 떄 사용
+
+    //1.매개변수가 없고 반환값도 없음.
+    function aaa(){
+        console.log("aaa");
+    }
+    aaa();
+    //2.매개 =변수가 없고, 반환값이 있음.
+    function bbb(){
+        return "bbb";
+    }
+    bbb(); // => "bbb"
+    console.log(bbb());
+
+    //3.매개변수가 있고, 반환값이 없음.
+    let number1 = 5;
+    let number2 = 3;
+    function ccc(num1, num2){   
+        console.log(num1+num2);
+    }
+    ccc(number1, "hello");
+    
+    //4.매개변수가 있고, 반환값이 있음.
+    function ddd(num1, num2){   
+        return num1 + 5; 
+    }
+    let num = ddd(10);
+    console.log(num);
+
+    let sum = function(num1, num2){
+        let num = num1 + num2;
+        let mul = num * 5;
+        return mul;
+    }
+    let sumMul = sum(3, 6);
+    console.log(sumMul);
+    </script>
+    
+</body>
+</html>
