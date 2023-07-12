@@ -10,12 +10,23 @@
         //정수 n이 있을 때 2또는 3의 배수의 총합 구하기.
         //단, n은 0<n<100)
 
-        let n = 0;
 
-        while(n % 2 == 0 || n % 3 == 0){
-            if()
-        
+        function calSum(){
+        let n = 1;
+        let sum = 0;
+
+        while(n > 0 && n < 100){
+            if(n % 2 == 0 || n % 3 == 0){
+               sum = sum + n;  
+            
+            }
+            n++;
         }
+        return result;
+    }
+        let total = calSum();
+        console.log(total);
+        
     </script>
 </body>
 </html>

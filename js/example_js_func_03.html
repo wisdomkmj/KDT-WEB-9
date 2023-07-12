@@ -7,37 +7,44 @@
 </head>
 <body>
     <script>
+        // let num1 = 0;
+        // let num2 = 0;
 
-        let func0 = function(){
-            let num1 = alert(Number(prompt('첫번째 값 입력')));
-            let num2 = alert(Number(prompt('두번째 값 입력')));
-        }    
-        func0();
+        //let inp = function(){
+             num1 = (Number(prompt('첫번째 값 입력')));
+             num2 = (Number(prompt('두번째 값 입력')));
+        //} 
 
-        let func1 = function(num1, num2){
-            let result1 = num1 + num2; 
-            return result1;
+        let add = function(){
+            let result1; 
+            //inp();
+            result1 = num1 + num2;
+            alert(result1);      
+         }
+        let sub = function(){
+            let reslut2;
+            //inp();
+            result2 = num1 - num2;
+            alert(result2);      
+         }
+        let mul = function(){
+            let reslut3;
+            //inp();
+            result3 = num1 * num2;
+            alert(result3);      
+         }
+        let div = function(){
+            let result4;
+            //inp();
+            result4 =num1 / num2;
+            alert(result4);      
+        }
 
-        }
-        let func2 = function(){
-            let result2 = num1 - num2;
-            return result2;
-        }
-        let func3 = function(){
-            let result3 = num1 * num2;
-            return result3;
-            
-        }
-        let func4 = function(){
-            let result4 =num1 / num2;
-            return result4;
-        }
-    
-    </script>
-    <button onclick="func1()">더하기</button>
-    <button onclick="func2()">빼기</button>
-    <button onclick="func3()">곱하기</button>
-    <button onclick="func4()">나누기</button>
+</script>
+<button onclick="add()">더하기</button>
+<button onclick="sub()">빼기</button>
+<button onclick="mul()">곱하기</button>
+<button onclick="div()">나누기</button> 
     
 </body>
 </html>
