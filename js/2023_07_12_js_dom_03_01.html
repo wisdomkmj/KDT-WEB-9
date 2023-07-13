@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .red {
+            background-color: red;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="red" class="box red">
+        <span>빨간</span>
+        <span>상자</span>
+    </div>
+    
+    <div id="orange" class="box orange"></div>
+    
+    <div class="box yellow"></div>
+
+    <button type="button" onclick="redToggle()">깜빡 깜빡</button>
+
+    <script>
+
+        function redToggle() {
+            let redBox = document.getElementById("red")
+            redBox.classList.toggle("red")
+            // classList 속성은 toggle 함수 제공
+            // 괄호 안에 들어온 값을 리스트 안에 존재하는 지 알아서 판단
+            // 괄호 안에 들어온 값을 자동으로 추가하거나 삭제함.
+
+            // if(redBox.classList.contains("red"))
+            //     redBox.classList.remove("red")
+            // else {
+            //     redBox.classList.add("red")
+            // }
+
+            // classList 속성은 contains 함수 제공
+            // 괄호 안에 들어온 값이 클래스에 존재하는 지 검사 
+            // true false return
+
+            // classList 속성은 remove 함수 제공
+            // 괄호 안에 들어온 값을 리스트 안에서 삭제
+
+            // classList 속성은 add 함수 제공
+            // 괄호 안에 들어온 값을 리스트 안에 추가
+        }
+        
+    </script>
+</body>
+</html>

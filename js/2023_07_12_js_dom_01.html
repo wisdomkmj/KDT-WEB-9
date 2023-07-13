@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let now = new Date()
+        let expired = new Date('2023-06-07')
+        console.log(now)
+        console.log(expired)
+        now.getFullYear()
+        console.log(now.getFullYear()) // Wed Jul 12 2023 15:59:56 GMT+0900 (한국 표준시)
+        console.log(now.getMonth()) //6 
+        console.log(now.getMonth()+1) //7
+        //getMonth()는 실제 월-1 된다.
+
+        console.log(now.getDate())// 12
+        console.log(now.getDay()) //3 -> 요일을 숫자로 반환
+        console.log(now.getTime())
+        console.log(now.getTime() >= expired.getTime())
+
+        let year = now.getFullYear()
+        let month = now.getMonth() + 1
+        let date = now.getDate()
+        
+        console.log(`${year}-${month >= 10 ? month : "0"+month}-${date >= 10 ? date : "0"+date}`)
+
+        console.log(now.getHours())
+        console.log(now.getTime())
+    </script>
+</body>
+</html>

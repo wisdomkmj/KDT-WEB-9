@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Object Model)</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .red{
+            background-color: red;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box red" id="red">
+        <span>빨간 상자</span>
+        <span>상자</span>
+    </div>
+    <div class="box orange" id="orange"></div>
+    <div class="box yellow"></div>
+
+    <button type="button" onclick="redToggle()">깜빡 깜빡</button>
+
+    <input type="text" name="id"/>
+    
+
+
+    <script>
+        //-------------------------------------------------------------------
+        //1.
+        // let redBoxByID = document.getElementById("red")
+        // console.log(redBoxByID)
+        // let boxes = document.getElementsByClassName("box")
+        // console.log("boxes")
+
+        // let boxesByTag = document.getElementsByTagName("div")
+        // console.log(boxesByTag)
+
+        // let input = document.getElementsByTagName("id")
+        // console.log(input)
+
+        // let boxesBySelector =document.querySelector(".box")
+        // console.log(boxesBySelector)
+
+        // let boxesBySelectorAll = document.querySelectorAll(".box")
+        // console.log(boxesBySelectorAll)
+
+        // let orangeBySelectorAll = document.querySelectorAll("#orange")
+        // console.log(orangeBySelectorAll)
+        //-------------------------------------------------------------------
+        //2.
+        //let redBox = document.getElementById("red")
+        // redBox.innerHTML = "<span>aaa</span>"
+        // console.log(redBox.innerText)
+        // console.log(redBox.innerHTML)
+        // console.log(redBox.textContent)
+
+        // console.log(redBox.className)
+        // redBox.className = "yellow"
+
+        //console.log(redBox.classList.add())
+
+        function redToggle() {
+            let redBox = document.getElementById("red")
+                if(redBox.classList.contains("red"))
+            redBox.classList.remove("red")
+                else{
+                redBox.classList.add("red")
+             }
+        }
+        // classList 속성은 toggle 함수 제공
+        // 괄호 안에 들어온 값을 리스트 안에 존재하는지 알아서 판단
+        //괄호 안에 들어온  값을 자동으로 추가하거나 삭제
+
+        // classList 속성은 contains 함수 제공
+        // 괄호 안에 들어온 값이 클래스에 존재하는지 검사
+        // true 또는 false 값 return
+
+        // classList 속성은 remove 함수 제공
+        // 괄호 안에 들어온 값을 리스트 안에서 삭제
+
+        // classList 속성은 add 함수 제공
+        // 괄호 안에 들어온 값을 리스트 안에 추가
+    </script>
+</body>
+</html>

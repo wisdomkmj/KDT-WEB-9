@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .green {
+            background-color: green;
+        }
+
+         <button type="button" onclick="greenToggle()">깜빡 깜빡</button>
+    </style>
+</head>
+<body>
+    <div class="box red first">
+        <p>asd</p>
+        <p>asd</p>
+    </div>
+    <div class="box blue seecond">
+        <span>asdasd</span>
+    </div>
+    <div class="box green third">
+        <div>qweqwe</div>
+        <div>asdasd</div>
+    </div>
+
+    <script>
+        function greenToggle(){
+            let greenBox = document.getElementsByClassName("box")
+            greenbox.classList.toggle("box")
+        }
+    </script>
+</body>
+</html>
