@@ -1,2 +1,2 @@
-# practice1
-for practice1
+# KDT WEB 9
+수업 코드
