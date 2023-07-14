@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+    }
+    .red{
+        background-color: red;
+    }
+    .orange{
+        background-color: orange;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    .green{
+        background-color: green;
+    }
+    .blue{
+        background-color: blue;
+    }
+    .darkblue{
+        background-color: darkblue;
+    }
+    .purple{
+        background-color: purple;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <div class="box red" onclick="boom2()"></div>
+
+    <script>
+        let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'darkblue', 'purple'];
+        let num1 = 0;
+
+        function boom2() {
+    let num2 = num1;
+    let currentColor = colors[num2];
+    let nextColor = colors[(num2 + 1) % colors.length];
+    
+    $('.box').removeClass(currentColor).addClass(nextColor);
+    num1 = (num1 + 1) % colors.length;
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(238, 165, 165);
+        }
+        .box{
+            font-size: 100px;
+        }
+        /* @media 유형 and (크기 조건){여기에 css문법 ㄱ} */
+        /* 유형: screen, all, print */
+        /* 크기 조건: max, min-width/ max,min-height */
+        /* max-width: 오른쪽에 나온 숫자 값 이하일때 */
+        /* min-width: 오른쪽에 나온 숫자 값 이상일때 */
+        /* 바뀌는 것만 아래에다 적으면 된다. */
+        /* @media screen and (max-width: 700px){
+            body {background-color: rgb(225, 245, 195);
+            font-family: serif;
+        }}
+        @media screen and (max-width: 500px){
+            body {background-color: rgb(209, 217, 248);
+            font-family: Arial, Helvetica, sans-serif;
+        }}
+        @media screen and (max-width: 300px){
+            body {background-color: rgb(194, 232, 240);
+            font-family: serif;
+        }} */
+
+        /* @media print {
+            .box{
+                display:none;
+            }
+        } */
+   
+
+    
+        /* body{
+            background-color: rgb(193, 189, 189);
+        }
+
+        @media screen and (min-width: 300px){
+            body{
+            background-color: rgb(247, 247, 203);
+        }
+        }
+        @media screen and (min-width: 500px){
+            body{
+            background-color: rgb(203, 247, 225);
+        }
+        } */
+        @media screen and(orientation: landscape)
+        {
+            body{
+                background-color: rgb(215, 215, 253);
+            }
+        }
+        @media screen and(orientation: portrait)
+        {
+            body{
+                background-color: rgb(253, 198, 210);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="class">Hi!</div>
+</body>
+</html>

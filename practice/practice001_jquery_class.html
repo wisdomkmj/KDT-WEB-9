@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        /* cursor: wait; */
+    }
+    .red{
+        background-color: red;
+    }
+    .orange{
+        background-color: orange;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    .green{
+        background-color: green;
+    }
+    .blue{
+        background-color: blue;
+    }
+    .darkblue{
+        background-color: darkblue;
+    }
+    .purple{
+        background-color: purple;
+    }
+
+</style>
+
+</head>
+
+<body>
+    <div class="box red" onclick="boom2()"></div>
+
+    <script>
+        // if문을 사용하는 방법.
+        // hasClass를 이용하여 Class 조회.
+        // switchClass를 이용하여 Class 변경.
+ 
+        // function boom(){
+        //     if($(".box").hasClass("red"))
+        //         $(".box").switchClass("red","orange",200)
+        //         else if($(".box").hasClass("orange"))
+        //         $(".box").switchClass("orange","yellow",200)
+        //         else if($(".box").hasClass("yellow"))
+        //         $(".box").switchClass("yellow","green",200)
+        //         else if($(".box").hasClass("green"))
+        //         $(".box").switchClass("green","blue",200)
+        //         else if($(".box").hasClass("blue"))
+        //         $(".box").switchClass("blue","darkblue",200)
+        //         else if($(".box").hasClass("darkblue"))
+        //         $(".box").switchClass("darkblue","purple",200)
+        //         else if($(".box").hasClass("purple"))
+        //         $(".box").switchClass("purple","red",200)
+        // }
+        //-------------------------------------------------------
+
+        // 배열을 사용하는 방법1.
+
+        let colors =["red", "orange", "yellow", "green" ,"blue", "darkblue","purple", "red"]
+        let num1 = 0;
+        function boom2() {
+            // let num2 = num1;
+            $(".box").switchClass(colors[num1], colors[num1 + 1], 500);
+            num1++;
+            console.log(num1, colors.length-1)
+            if (num1 === colors.length-1)
+                num1 = 0;
+        }
+        
+        // 배열을 사용하는 방법2.
+        // let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'darkblue', 'purple'];
+        // let num1 = 0;
+
+        // function boom2() {
+        //     let num2 = num1;
+        //     $('.box').switchClass(colors[num2], colors[(num2 + 1) % colors.length], 500);
+        //     num1 = (num1 + 1) % colors.length;
+        // }
+        
+    </script>
+</body>
+</html>
