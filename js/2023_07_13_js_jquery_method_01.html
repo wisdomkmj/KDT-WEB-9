@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all 2s;
+        }
+        .red{
+            background-color: red;}
+        .orange{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="id" id="id"/>
+    <input type="text" name="id" id="id"/>
+    <button onclick="submitt()">바껴라</button>
+    <button onclick="btn2()">사라져라</button>
+
+
+    <div ></div>
+    <div ></div>
+
+
+
+
+
+    <script>
+        $("input").val("aaaa");
+        //$("div").css("background-color", "blue");
+
+
+        // jquery 사용법 : $("선택자").함수() 
+        function submitt(){
+
+            //css 변경
+            // $("div").css("background-color", "blue");
+            // $("div").css("border-radius", "50%");
+            // $("div").css("background-color", "yellow");
+
+            // attr 함수
+            $("input").attr("placeholder", "asdasd");
+
+            // text 함수  .innerText
+            $("div").text("안녕?")
+
+            // html 함수   .innerHTML
+            $("div").html("<p>ㅎㅇㅎㅇㅎㅇ<p/>")
+
+            // append 함수 
+            $("div").append("<h1>adadadasdasdasd<h1/>")  
+            
+            // prepend 함수     
+            $("div").prepend("<h1>adadadasdasdasd<h1/>")  
+            
+            // after 함수    
+            $("div").after("<h1>adadadasdasdasd<h1/>")  
+            
+            // before 함수     
+            $("div").before("<h1>adadadasdasdasd<h1/>")
+               
+             // remove 함수     
+            $("div").empty("<h1>adadadasdasdasd<h1/>")
+
+            // addClass 함수
+            $("div").addClass("red")
+
+            // removeClass 함수
+            $("div").removeClass("red")
+
+        } 
+
+            function btn2(){
+
+            // removeClass 함수
+            $("div").removeClass()
+            //$("div").removeClass("red")
+
+            //hasClass 함수
+            $("div").hasClass()
+
+            // toggleClass 함수
+            $("div").toggleClass("red")
+
+            }   
+
+
+
+            //let valueJQeury =  $("#id").val() //JQuery
+            //let valueJs =document.getElementById("id").valueJQeury //바닐라 js
+            //console.log(valueJQeury, valueJs)
+            
+            //document.getElementById("id").value = "aaa"; //바닐라 js
+            //$("#id").val("aaa"); //JQuery
+
+        
+
+
+
+    
+    </script>    
+</body>
+</html>

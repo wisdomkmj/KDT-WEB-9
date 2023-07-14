@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+<style>
+
+</style>
+</head>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>a
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+<body>
+    <h3>2023년 7월</h3>
+    <div>날짜: <input type="text"></div>
+    <div>내용: <input type="text"></div>
+    <button type="button" onclick="">작성</button>
+
+    
+    <script>
+        let td = null;
+        //td태그 클릭 이벤트 코드
+        $("td").on("click", function (obj){
+            td = this;
+            let date = $(this).text()
+            console.log(date)
+            $("#date").val(date)
+        })
+
+        //작성 버튼 클릭 이벤트 코드
+        $("button").on("click", func(){
+            let btn = $(this).val()
+            console.log(btn)
+            $(button).val(btn)
+        } )        
+
+        func sche(){
+            let 내용 = "내용"
+        }
+             
+
+        $("td").on("click",function(){
+            console.log(this);
+            console.log($(this).text());
+        })
+
+        
+        
+    </script>
+</body>
+</html>

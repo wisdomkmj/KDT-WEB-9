@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+        .red{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .orange{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red"></div>
+        <div class="orange"></div>
+        <div class="red"></div>
+    </div>
+
+    <button onclick="fn2()">요소탐색</button>
+
+    <script>
+        function fn2(){
+            //console.log($(".container").children().removeClass("red"))
+            console.log($(".orange").parent())
+            console.log($(".orange").parents())
+            console.log($(".orange").next())
+            console.log($(".orange").prev())
+
+            console.log($(".red").nextAll())
+        }
+    </script>
+</body>
+</html>
