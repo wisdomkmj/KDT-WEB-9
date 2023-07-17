@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            height: 500px;
+            /* minmax(최소, 최대) */
+            /* grid-template-columns: repeat(3, minmax(100px,auto)); */
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(3, 200px);
+            /* grid-template-rows: repeat(3, 200px); */
+            /* row-gap: 20px; */
+            /* column-gap: 20px; */
+            /* gap: 20px 10px; */
+            gap: 20px;
+            /* justify-items: content; */
+            /* align-items: center; */
+            /* place-items:center; */
+            /* place-items: end center; */
+            /* place-items: end; */
+            /* ~~~-items : item 요소(자식 요소)가 존재할 수 있는... */
+
+            /* justify-content: center; */
+            /* align-content: center; */
+            /* place-content: center; */
+            /* ????-content: container 영역 내에서부모 요소 자체를 정렬 */
+        }
+        .item{
+            width: 100px; 
+            height: 100px; 
+        }
+        .red{
+           
+            background-color: red;
+            /* grid-column: 1/ 4; */
+            /* grid-column: 1 / span 3; */
+            /* grid-column: auto / span 3; */
+            /* grid-column-start: 1; */
+            /* grid-column-end: 4; */
+            place-self: center;
+        }
+        .orange{
+            
+            background-color:orange;
+            /* grid-row: 2 / 4; */
+            /* grid-row: auto / span 2; */
+            place-self: center;
+        }
+        .yellow{
+            background-color:yellow;
+            /* justify-self: center; */
+            /* align-self: center; */
+            place-self: center;
+            /* place-self: center; 얘는  
+            justify-self: center; align-self: center; 이거 두개 사용한 것과 같다. */
+        }   
+        .green{
+            background-color: green;
+            width: 500px; 
+            z-index: 1; 
+        }
+        .blue{
+            background-color: blue;
+        }
+        .navy{
+            background-color: navy;
+        }
+        .purple{
+            /* order: -1; */
+            /* order를 이용하여 순서를 배치하는 것은 좋은 방법은 아니다. */
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item red"></div>
+        <div class="item orange"></div>
+        <div class="item yellow"></div>
+        <div class="item green"></div>
+        <div class="item blue"></div>
+        <div class="item navy"></div>
+        <div class="item purple"></div>
+    </div>
+</body>
+</html>

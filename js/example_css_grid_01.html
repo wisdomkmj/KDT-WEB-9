@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            height: 400px;
+            grid-template-columns: repeat(6, 400px);
+            grid-template-rows: repeat(6, 400px);
+
+            grid-template-areas: 
+            'header header header header header header'
+            'nav main1 main1 main1 main1 aside'
+            'nav main2 main2 main3 main3 aside'
+            'footer footer footer footer footer footer';
+
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .head{
+            grid-area: header;
+            background-color: #f94144;
+            color: black;
+            font-size: 100px;
+            
+
+
+        }
+        .nav{
+            grid-area:nav;
+            background-color: #f3722e;
+            color: black;
+            font-size: 100px;
+            
+        }
+        .main1{
+            grid-area: main1;
+            background-color: #f9c74f;
+            color: black;
+            font-size: 100px;
+            
+        }
+        .main2{
+            grid-area: main2;
+            background-color:#f8961e;
+            color: black;
+            font-size: 100px;
+            text-align: center;
+        }
+        .main3{
+            grid-area: main3;
+            background-color: #90b26d;
+            color: black;
+            font-size: 100px;
+            
+        }
+        .aside{
+            grid-area: aside;
+            background-color: #43aa8b;
+            color: black;
+            font-size: 100px;
+            
+        }
+        .footer{
+            grid-area: footer;
+            background-color: #4444ff;
+            color: white;
+            font-size: 100px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item head"><strong>#f94144</strong></div>
+        <div class="item nav"><strong>#f3722e</strong></div>
+        <div class="item main1"><strong>#f9c74f</strong></div>
+        <div class="item main2"><strong>#f8961e</strong></div>
+        <div class="item main3"><strong>##90b26d</strong></div>
+        <div class="item aside"><strong>#43aa8b</strong></div>
+        <div class="item footer"><strong>#4444ff</strong></div>
+    </div>
+
+</body>
+</html>
