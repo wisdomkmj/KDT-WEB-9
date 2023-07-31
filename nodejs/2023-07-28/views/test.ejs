@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" 
+    integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" 
+    crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h4><%= name %></h4>
+    <h4>qweasd</h4>
+
+    <ul class="test">
+        <% for( var i = 0; i < 5; i++) {%>
+        <li>안녕</li>
+        <% } %>
+    </ul>
+    <!-- <img src="/public/image.png" alt=""/> -->
+
+    <!-- <div class="apple"></div> -->
+    <img src="/public/fruits/apple.jpg" width="300" height="300" />
+    <br />
+
+    <% fir(let i=0; i < fruit.length; i++){%>
+    <button class="btn <%= fruit[i].name %>"><%= fruit>}
+
+    <button type="button" onclick="changeFruits('apple')">사과</button>
+    <button type="button" onclick="changeFruits('banana')">바나나</button>
+    <button type="button" onclick="changeFruits('grape')">포도</button>
+    <button type="button" onclick="changeFruits('peach')">복숭아</button>
+
+    
+    <script>
+            function changeFruits(fruits) { 
+            // $("div").removeClass().addClass(fruit)
+            $("img").attr("src", `/public/fruits/${fruits}.jpg`)
+        }
+    </script> 
+    
+</body>
+</html>
