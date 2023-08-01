@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1><%= title %></h1>
+        <form action="/getForm" method="GET">
+        이름<input type="text" placeholder="id" name="id" required >    
+        <fieldset>
+            <legend>성별
+                <input type="radio">
+                <input type="radio">
+            </legend>
+        </fieldset>
+        <fieldset>
+            <legend>생년월일</legend>
+        </fieldset>
+        <fieldset>
+            <legend>관심사</legend>
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>
