@@ -16,6 +16,12 @@ app.get("/", (req, res) => {
     //res.send("hello");
     res.render("index", {title:"폼 전송 실습"});
 });
+
+app.get("/ajax", (req,res) => {
+    console.log("back", req.query);
+    res.send(req.query);  
+});
+
 app.get("/getForm", (req, res) => {
     console.log(req.query);
     res.render("result", {
