@@ -1,28 +1,40 @@
-// express 모듈 불러오기
-const express = require("express");
+const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = 8000;
 
-// body-parser
+//body-parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+//view engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
-// view engine
-app.set("view engine", "ejs");
-app.set("views", "./views");
-
-// router
-app.get("/", (req, res) => {
-    res.render("index", { title: "axios get 회원가입"});
+//router
+app.get('/', (req, res) => {
+    res.render('index');
+});
+//get 실습
+app.get('/axiosGet', (req, res) => {
+    res.render('get');
+});
+app.get('/resultGet', (req, res) => {
+    res.send({ result: true, data: req.query });
 });
 
-// axios
-app.get("/axios", (req, res) => {    
-    console.log("back", req.query);
-    res.send(req.query);
+//post 실습
+app.get('/axiosPost', (req, res) => {
+    res.render('post');
+});
+app.post('/resultPost', (req, res) => {
+    const id = 'kim';
+    const pw = '1234';
+    if (id === req.body.username && pw === req.body.password) {
+        res.send({ result: true, userInfo: req.body });
+    } else {
+        res.send({ result: false, userInfo: null });
+    }
 });
 
-// server start
-app.listen(port, () => {
-    console.log(`http://localhost${port} SERVER START!`);
+app.listen(PORT, () => {
+    console.log(`http://localhost:${PORT}`);
 });

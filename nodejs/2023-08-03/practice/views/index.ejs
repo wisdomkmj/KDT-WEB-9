@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="userId">ID
+            <input type="text" name="userId" id="userId">
+        </label>
+        <br>
+        <br>
+        <label for="userPassword">PW
+            <input type="password" name="userPassword" id="userPassword">
+        </label>
+        <br>
+        <br>
+        <label for="userName">이름
+            <input type="text" name="userName" id="userName">
+        </label>
+        <br>
+        <br>
+        <label for="userAge">나이
+            <input type="text" name="userAge" id="userAge">
+        </label>
+        <br>
+        <br>
+        <div>프로필 사진: <input type="file" name="userfile" >
+        <br>
+        </div>
+        <br>
+        <br>
+        <div class="result"></div>
+        <br>
+        <br>
+        <button type="button" onclick="resetFunc()"><a href="/">리셋</a></button>
+        <button type="submit" onclick="joinFunc()">회원가입</button>
+    </form>
+    
+    <script>
+        // btn type에 reset을 해도 됨 혹은 btn onclik에 reset() 함수 넣어 놓으면 리셋댐.
+
+        const message = document.querySelector('.reslt');
+        function joinfunc() {
+            console.log('')
+        }
+    </script>
+</body>
+</html>

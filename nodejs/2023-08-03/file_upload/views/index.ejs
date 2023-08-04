@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>form 싱글 연습</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="userfile" ><br>
+        <input type="text" name="title" ><br>
+        <button type="submit">upload</button>
+    </form> 
+    
+    <h1>form 멀티 연습 ver.1</h1>
+    <form action="/upload/array" method="post" enctype="multipart/form-data">
+        <input type="file" name="userfiles" multiple><br>
+        <input type="text" name="title" ><br>
+        <button type="submit">upload</button>
+    </form>
+
+    <h1>form 멀티 연습 ver.2</h1>
+    <form action="/upload/fields" method="post" enctype="multipart/form-data">
+        <input type="file" name="userfile1" ><br>
+        <input type="text" name="title1" ><br>
+        <input type="file" name="userfile2" ><br>
+        <input type="text" name="title2" ><br>
+        <button type="submit">upload</button>
+    </form>
+
+    <h1>동적 파일 업로드</h1>
+    <input type="file" id="dynamic-file"><br>
+    <input type="text" id="title"><br>
+    <button type="button" onclick="fileUpload()">upload</button><br>
+    <div class="result"></div>
+    
+    <script>
+        const resultBox = document.querySelector(".result");
+        function fileUpload() {
+            const file = document.getElementById("dynamic-file");
+            // console.log(file); // 출력 확인해 보기.
+            console.log(file.files[0]); // 출력 확인해 보기. [0] 뺴고도.
+            const title = document.getElementById("title");
+
+            const formData = new FormData();
+            formData.append("title", title.value); // title에 있는 value값
+            formData.append("dynamic-file", file.files[0]);
+            // dynamic-file이 백엔드에서 받는값이 된다. 파일은 코드 마지막에 오도록 순서에 유의.
+        
+        axios({
+            method: "post",
+            url: "/dynamicFile",
+            data: formData, // date는 forData로 보냄.
+            headers: {  //객체형태로 ㄱㄱ
+                "Content-Type": "multipart/form-data",
+            },
+        }).then((res) => {
+            console.log("res", res);
+            resultBox.innerHTML = `<div><img src=${res.data.path}></div>`;
+        });
+        }
+    </script>
+
+</body>
+</html>

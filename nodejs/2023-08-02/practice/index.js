@@ -13,13 +13,30 @@ app.set("views", "./views");
 
 // router
 app.get("/", (req, res) => {
-    res.render("index", { title: "axios get 회원가입"});
+    res.render("index");
 });
 
-// axios
-app.get("/axios", (req, res) => {    
+// axios get
+app.get("/axiosGet", (req, res) => {    
     console.log("back", req.query);
-    res.send(req.query);
+    res.render("get",{ title: "axios get 실습"});
+});
+app.get("/resultGET", (req, res) => {
+    res.send({ result: true, data: req.query});
+})
+
+// axios post
+app.get("/axiosPost", (req, res) => {
+    res.render("post",{ title: "axios post 실습"});
+})
+app.post("/resultPost", (req, res) => {
+    const id = "kim";
+    const pw = "1234";
+    if ( id === req.body.id && pw === req.body.pw) {
+        res.send({ result: true, userInfo: req.body});
+    } else {
+        res.send({ result: false, userInfo: null});
+    }
 });
 
 // server start
