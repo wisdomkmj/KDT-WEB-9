@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <h1><%= title %>!</h1>
-    <form name="login" id="login">
+    <form  >
         <fieldset>
             <legend>login</legend>
                 <label for="id">ID</label>
-                <input type="text" name="id" id="id" required>
+                <input type="text" id="id" required>
                 <br>
                 <br>
                 <label for="pw">PW</label>
-                <input type="password" name="pw" id="pw" required>
+                <input type="password" id="pw" required>
                 <br>
                 <br>
-                <button type="button" onclick="login1()">로그인</button>
+                <button type="button" onclick="login()">로그인</button>
         </fieldset>
         <div class="message"></div>
         <br>
@@ -31,13 +31,13 @@
     <script>
         const message = document.querySelector(".message");
 
-        function login1() {
+        function login() {
             console.log("axios post");
             const data = {
                 // ID: document.querySelector("#id").value,
                 // PW: document.querySelector("#pw").value,
-                ID: document.querySelector("#id").value,
-                PW: document.querySelector("#pw").value,
+                id: document.querySelector("#id").value,
+                pw: document.querySelector("#pw").value,
             };
             console.log(data);
             axios({
@@ -47,10 +47,10 @@
             }).then((res) => {
                 console.log("res", res);
                 if(res.data.result) {
-                    message.TextContet = `${res.data.userInfo.ID}님 로그인 되었습니다.`;
+                    message.textContent = `${res.data.userInfo.id}님 로그인 되었습니다.`;
                     message.style.color = "blue";
                 }else {
-                    message.TestContent = "ID 또는 PW를 확인해주세요.";
+                    message.textContent = "ID 또는 PW를 확인해주세요.";
                     message.style.color = "red";
                 }
             });

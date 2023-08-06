@@ -18,10 +18,10 @@ app.get("/", (req, res) => {
 
 // axios get
 app.get("/axiosGet", (req, res) => {    
-    console.log("back", req.query);
     res.render("get",{ title: "axios get 실습"});
 });
-app.get("/resultGET", (req, res) => {
+app.get("/resultGet", (req, res) => {
+    console.log("back", req.query); // axiosGet에 있다가 resultGet으로 옮기니 데이터 출력
     res.send({ result: true, data: req.query});
 })
 
@@ -32,6 +32,7 @@ app.get("/axiosPost", (req, res) => {
 app.post("/resultPost", (req, res) => {
     const id = "kim";
     const pw = "1234";
+    console.log(req.body);
     if ( id === req.body.id && pw === req.body.pw) {
         res.send({ result: true, userInfo: req.body});
     } else {
