@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 //localhost:8000/visitor
-app.use("./visitor", visitorRouter)
+app.use("/visitor", visitorRouter)
 
 // app.use, app.get differnce?
 app.get("*", (req, res) => {
