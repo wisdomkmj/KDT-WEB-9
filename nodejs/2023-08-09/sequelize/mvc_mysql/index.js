@@ -3,6 +3,7 @@ const express =require("express");
 require("express");
 const app = express();
 const port = 8000;
+const db = require("./models")
 
 // ejs template engine.
 app.set("view engine", "ejs");
@@ -27,6 +28,9 @@ app.get("*", (req, res) => {
     res.render("404");
 });
 
-app.listen(port, () => {
-    console.log(`http://localhost:${8000} SERVER START!`)
+db.sequelize.sync({ force: false }).then(() =>{
+    app.listen(port, () => {
+        console.log(`http://localhost:${port} SERVER START!`)
+    });
 });
+    

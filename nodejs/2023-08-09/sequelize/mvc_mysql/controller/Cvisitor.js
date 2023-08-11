@@ -15,6 +15,7 @@ exports.getVisitors = (req, res) => {
     models.Visitor.findAll().then((result) => {
         //console.log('findAll', result);
         res.render('visitor', { data: result });
+        
     });
 };
 //방명록 하나 조회
