@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="fileupload(event)">
+        <input type="file" id="dynamic" multiple><br>
+        <!-- <input type="text" id="title"><br> -->
+        <button type="submit">업로드</button>
+</form>
+<br>
+<div class="result"></div>
+
+<script>
+    const resultBox = document.querySelector(".result");
+
+    async function fileupload(event) {
+        event.preventDefault();
+        console.log("file upload");
+        // const title = document.querySelector("#title").value;
+        const file = document.querySelector("#dynamic");
+        console.log(file.files);
+
+        const formData = new FormData();
+        for ( let i = 0; i < file.files.length; i++){
+            formData.append("dynamic", file.files[i]);
+        }
+        // formData.append("title", title);
+
+        try {
+            const res = await axios({
+                method: "post",
+                url: "/upload",
+                data: formData,
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            });
+            res.data.forEach(elem => {
+                resultBox.innerHTML += `<img src="${elem.path}" style = "width: 500px">`;
+            
+                // const img = document.creatElement("img");
+                // img.src = elem.path;
+                // img.style.width = "500px";
+                // resultBox.appendChild(img);
+            });
+        } catch (error) {
+            console.log(error);
+        }        
+    }
+
+</script>
+</body>
+</html>
