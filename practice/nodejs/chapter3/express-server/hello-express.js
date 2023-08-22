@@ -4,7 +4,7 @@ const port = 3000;
 
 app.get("/", (req ,res) => { // /로 요청이 오는 경우 실행.
     res.set({ "Content-Type": "text/html; charset=utf-8 "}); // 헤더값 설정.
-    res.end("헬로 Express");
+    res.end("Hello express");
 });
 
 app.listen(port, () => {

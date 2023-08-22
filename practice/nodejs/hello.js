@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200; 
     // 요청에 대한 상태 코드를 200으로 설정. http 프로토콜에서 200은 성공이라는 의미.
     res.setHeader("Content-Type", "text/plain");
-    // HTTP는 요청/응답에 대한 부가 정로를 설정할 수 있음.
+    // HTTP는 요청/응답에 대한 부가 정보를 설정할 수 있음.
     // 부가 정보는 header에 설정. Content-Type을 text/plain으로 설정
     // Content-Type : 해당 콘텐츠가 어떤 형태의 데이터인지 나타냄.
     // text/plain : 텍스트를 평문으로 해석한다는 뜻. 
@@ -34,4 +34,4 @@ function log(count){
     console.log((count += 1));
 }
 
-server.listen(8000); // 사용할 포트 번호를 8000번으로 지정.
+server.listen(8000, () => console.log("Hello Node.js")); // 사용할 포트 번호를 8000번으로 지정.

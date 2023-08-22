@@ -12,7 +12,7 @@ function register(user) { // 콜백이 3중으로 중첩.
 // DB에 저장 후 콜백 실행.
 function saveDB(user, callback) {
     DB.push(user);
-    console.log(`save ${user.name} to DB`);
+    console.log(`save ${user.name} to DB`);  
     return callback(user);
 }
 
@@ -30,3 +30,20 @@ function getResult(user) {
 const result = register({ email: "kim@test.com", password: "1234", name: "kim"});
 console.log(result);
 
+
+
+// 콜백 연습 
+// 요리 완성 시 호출되는 콜백 함수
+// function eatFood(food) {
+//     console.log("맛있게 " + food + "를 먹었습니다!");
+// }
+
+// // 요리 함수
+// function cookMeal(ingredient1, ingredient2, callback) {
+//     const meal = ingredient1 + "와 " + ingredient2 + "으로 만든 요리";
+//     console.log(meal + "가 완성되었습니다!");
+//     callback(meal); // 완성된 요리를 콜백 함수로 전달하여 먹기
+// }
+
+// // 요리 시작
+// cookMeal("김치", "밥", eatFood);

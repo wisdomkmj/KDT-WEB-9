@@ -40,7 +40,7 @@
                     "Content-Type": "multipart/form-data",
                 },
             });
-            res.data.forEach(elem => {
+            res.data.forEach((elem) => {
                 resultBox.innerHTML += `<img src="${elem.path}" style = "width: 500px">`;
             
                 // const img = document.creatElement("img");

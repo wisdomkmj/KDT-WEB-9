@@ -25,16 +25,18 @@ const storage = multer.diskStorage({
 const limits = {
     fileSize: 5 * 1024 * 1024
 };
-const upload = multer({ storage, limits });
 
-app.post("/upload", upload.array("dynamic"), (req, res) => {
-    console.log(req.file);
-    res.send(req.file);
-});
+const upload = multer({ storage, limits });
 
 app.get("/", (req ,res) => {
     res.render("index");
 });
+
+app.post("/upload", upload.array("dynamic"), (req, res) => {
+    console.log(req.files);
+    res.send(req.files);
+});
+
 
 app.use("*", (req, res) => {
     res.render("404");
