@@ -108,6 +108,7 @@ const db_profile_edit = (data, cb) => {
             return;
         }
         console.log("db_profile_edit", rows);
+        cd();
     });
 };
 

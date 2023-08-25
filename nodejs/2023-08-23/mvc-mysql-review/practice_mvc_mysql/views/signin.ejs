@@ -25,21 +25,18 @@
                         userid: document.querySelector("#userid").value,
                         pw: document.querySelector("pw").value,
                     },
-                }).then( res => { 
-            if(res.data.result) { 
-                alert(`${res.data.data.name} 님 로그인 성공`);
+                })
+                if(res.data.result) { 
+                    alert(`${res.data.data.name} 님 로그인 성공`);
                 document.location.href = "/profile/${res.data.data.id}";    
-            } else {
-                alert("로그인 실패");
-                document.location.reload();
-            }
-                 
-            })
-                
+                } else {
+                    alert("로그인 실패");
+                    document.location.reload();
+                }               
             } catch (error) {
                 console.log(error);
             }
-    }
+        }
     </script>
 </body>
 </html>
