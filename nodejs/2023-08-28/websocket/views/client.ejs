@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket</title>
+</head>
+<body>
+    <ul></ul>
+    <form id="chat">
+        <input type="text" id="message" placeholder="채팅내용"><br>
+        <button>채팅</button>
+    </form>
+
+    <script>
+        const socket = new WebSocket("ws://localhost:8000");
+        //form 가져오기(선택하기)
+        const chatForm = document.querySelector("#chat");
+        //ul 가져오기(선택하기)
+        const ul = document.querySelector("ul");
+
+        //서버에 연결 요청.
+        socket.addEventListener("open", () => {
+            socket.send("Hello Server!"); //send()함수는 백엔드로 메시지를 전송.
+            console.log("서버 연결 완료.");
+        });
+        //메시지 주고 받음.
+        socket.addEventListener("message", (event) => {
+            // console.log(`event: ${event}`);
+            // console.log(`서버로부터 받은 메시지: ${event.data}`);
+            const li = document.createElement("li");
+            li.textContent = event.data;
+            ul.appendChild(li);
+        });
+        //오류 이벤트
+        socket.addEventListener("error", () => {
+            console.log("오류 발생.", event.error); //event.error <- 객체임.
+        });
+
+        //종료 이벤트
+        socket.addEventListener("close", () => {
+            console.log("서버와 연결이 종료됨");
+        });
+
+        //폼 이벤트//
+        chatForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const msg = chatForm.querySelector("#message");
+            socket.send(msg.value);
+            msg.value = "";
+        });
+    </script>
+</body>
+</html>
