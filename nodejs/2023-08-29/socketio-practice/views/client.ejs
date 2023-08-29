@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Socket.IO</title>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <button onclick="hello()" id="hello">hello</button>
+    <button onclick="study()" id="study">study</button>
+    <button onclick="bye()" id="bye">bye</button>
+    <div id="result"></div>
+
+    <script>
+        const socket = io();
+        //div, button 가져오기.
+        const result = document.querySelector("#result");
+        // const btnHello = document.querySelector("#hello");
+        // const btnStudy = document.querySelector("#study");
+        // const btnBye = document.querySelector("#bye");
+
+        function hello() {
+            socket.emit("hello", { name: "client", message: "study"});
+        }
+        function study() {
+            socket.emit("study", { name: "client", message: "study"});
+        }
+        function bye() {
+            socket.emit("bye", { name: "client", message: "study"});
+        }
+
+        //이벤트 생성
+        // socket.emit("send-hello", "Hello!", (req) => {
+        //     console.log(req);
+        // }); 
+        // socket.emit("send-study", "study with codingon", (req) => {
+        //     console.log(req);
+        // });
+        // socket.emit("send-bye", "Bye..", (req) => {
+        //     console.log(req);
+        // });
+
+        // result.addEventListener("submit", (e) => {
+        //     e.preventDefault();
+            
+        // });
+        // btnHello.addEventListener("submit", (e) => {
+        //     e.preventDefault();
+        //     const message1 = btnHello.querySelector("#hello");
+        // });
+        // btnStudy.addEventListener("submit", (e) => {
+        //     e.preventDefault();
+        //     const message2 = btnStudy.querySelector("#study")
+        // });
+        // btnBye.addEventListener("submit", (e) => {
+        //     e.preventDefault();
+        //     const message3 = btnBye.querySelector("#bye");
+        //     result.appendChild
+        // }); 
+    </script>
+</body>
+</html>

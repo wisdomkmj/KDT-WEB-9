@@ -1,0 +1,19 @@
+{
+  "name": "socketio-practice",
+  "version": "1.0.0",
+  "description": "socket.io 실습",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon sever",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "김명준",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "socket.io": "^4.7.2"
+  }
+}
