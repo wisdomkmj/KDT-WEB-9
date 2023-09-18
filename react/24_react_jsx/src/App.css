@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.test__1 {
+  margin-right:200px;
+  margin-left: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  color: orange;
+}
+
+.test__2 {
+  margin-left: 250px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.red {
+  background-color: red;
+  color: red;
+  width: 50px;
+  height: 50px;
+
+}
+.orange {
+  background-color: orange;
+  color: orange;
+  width: 50px;
+  height: 100px;
+}
+.yellow {
+  background-color: yellow;
+  color: yellow;
+  width: 50px;
+  height: 150px;
+}
+.green {
+  background-color: green;
+  color: green;
+  width: 50px;
+  height: 200px;
+}
+.blue {
+  background-color: blue;
+  color: blue;
+  width: 50px;
+  height: 250px;
+}
+.darkblue {
+  background-color: darkblue;
+  color: darkblue;
+  width: 50px;
+  height: 300px;
+}
+.purple {
+  background-color: purple;
+  color: purple;
+  width: 50px;
+  height: 350px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
