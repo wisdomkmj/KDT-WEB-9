@@ -1,5 +1,5 @@
 // import ClassComponent from './ClassComponent';
-import FunctionComponent from './FunctionComponent';
+// import FunctionComponent from './FunctionComponent';
 // import BugComponent from './BugComponent';
 // import Test from "./Test";
 // import Test2 from "./Test2";
