@@ -1,0 +1,15 @@
+.box {
+    background-color: rgb(240, 225, 184);
+    width: 300px;
+    text-align: center;
+}
+
+.best { 
+    color: rgb(27, 63, 162);
+    font-size: 20px;
+}
+
+.b {
+  text-align: left;  
+  margin-left: 31px;
+}
